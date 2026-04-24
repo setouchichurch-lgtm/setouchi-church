@@ -108,9 +108,16 @@
 
 /* ===== 説明 ===== */
 .description {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 24px;
+
   text-align: center;
-  margin: 30px;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+
+  word-break: keep-all;
 }
 
 /* ===== 教会一覧 ===== */

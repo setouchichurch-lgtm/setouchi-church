@@ -1,0 +1,412 @@
+﻿body {
+  margin: 0;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+
+.font-shippori {
+
+  font-family: "Klee One", cursive;
+  font-weight: 200;
+
+}
+
+
+
+/* ===== ヘッダー全体 ===== */
+.site-header {
+  background: #e0ffff;
+  padding: 40px 20px 30px;
+}
+
+/* 内側余白 */
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* タイトル全体 */
+.site-title {
+  margin: 0;
+  line-height: 0.9;
+  position: relative;
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+
+}
+
+/* 上段 */
+.title-top {
+  display: block;
+  font-size: 25px;
+  letter-spacing:0.2em;
+  color: #555;
+}
+
+/* 下段 */
+.title-bottom {
+  display: block;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-top: 0.2em;
+  color: #222;
+}
+
+/* 下線（デザインのキモ） */
+.site-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #aaa;
+  margin-top: 0.3em;
+}
+
+
+/* ===== YouTube ===== */
+.youtube-wrapper {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #999;
+  padding: 20px 40px;
+  position: relative;
+  background: #fff;
+}
+
+.youtube-title {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+/* スライド */
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: 0.4s;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== 説明 ===== */
+.description {
+  text-align: center;
+  margin: 30px;
+  font-size: 14px;
+}
+
+/* ===== 教会一覧 ===== */
+
+
+.church-list h2 {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
+
+
+/* ===== スマホ ===== */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+
+/* ===== 矢印（シンプル重ね） ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: none;
+}
+
+/* 矢印本体 */
+.arrow::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+}
+
+/* 左 */
+.left {
+  left: 10px;
+}
+
+.left::before {
+  transform: rotate(-135deg);
+}
+
+/* 右 */
+.right {
+  right: 10px;
+}
+
+.right::before {
+  transform: rotate(45deg);
+}
+
+/* ホバー時ちょっと強調 */
+.arrow:hover::before {
+  border-color: #000;
+}
+
+/* 親要素を基準にする */
+.slide a {
+  position: relative;
+  display: block;
+}
+
+/* 再生ボタン（丸） */
+.slide a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+}
+
+/* 三角（再生マーク） */
+.slide a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  
+  border-left: 18px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+
+.new-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 80px solid #e60023;      /* 三角の色 */
+  border-right: 80px solid transparent;
+}
+
+/* 文字 */
+.new-badge::after {
+  content: "NEW";
+  position: absolute;
+
+  top: -65px;
+  left: 8px;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  transform: rotate(-45deg);
+}
+
+.slide a {
+  position: relative;
+}
+
+/* 横並び＆中央 */
+.title-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* アイコン */
+.church-icon {
+  width: 70px;   /* サイズ調整 */
+  height: auto;
+}
+
+
+/*各地の教会欄*/
+.church-list {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* カード */
+.church-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+
+  transition: 0.3s;
+}
+
+.church-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 画像 */
+.church-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* 情報 */
+.church-info {
+  flex: 1;
+}
+
+.church-info h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/* テキスト */
+.church-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* リンク */
+.church-info a {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.church-info a:hover {
+  text-decoration: underline;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  .church-card {
+    flex-direction: column;
+  }
+
+  .church-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .church-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .church-card {
+    margin-bottom: 0; /* ←余計な余白を消す */
+  }
+}
+
+.section-title {
+  max-width: 1000px;
+  margin: 60px auto 20px;
+  padding: 0 20px;
+
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.church-info a {
+  display: inline-block;
+  margin-top: 10px;
+
+  padding: 8px 16px;
+  font-size: 14px;
+
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ホバー */
+.church-info a:hover {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}

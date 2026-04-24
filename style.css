@@ -388,7 +388,7 @@
   padding-bottom: 8px;
 }
 
-.church-info a {
+.btn-link {
   display: inline-block;
   margin-top: 10px;
 
@@ -412,6 +412,3 @@
 }
 
 
-.church-info a[href^="tel"] {
-  all: unset;
-}

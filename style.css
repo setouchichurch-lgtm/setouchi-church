@@ -410,3 +410,8 @@
   color: #fff;
   border-color: #333;
 }
+
+
+.church-info a[href^="tel"] {
+  all: unset;
+}

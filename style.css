@@ -439,13 +439,15 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .description {
-    font-size: 14px;
-    line-height: 1.9;
-    padding: 0 18px;
+    max-width: 600px;   /* YouTubeと同じ幅 */
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
 
-    /* ここ重要 */
-    max-width: 92%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
   }
 }

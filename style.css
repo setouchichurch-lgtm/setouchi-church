@@ -110,14 +110,14 @@
 .description {
   max-width: 700px;
   margin: 40px auto;
-  padding: 0 24px;
+  padding: 0 20px;
 
   text-align: center;
   font-size: 15px;
-  line-height: 1.9;
-  letter-spacing: 0.05em;
+  line-height: 1.8;
 
   word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* ===== 教会一覧 ===== */
@@ -436,5 +436,16 @@
 @media (max-width: 767px) {
   .pc-break {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .description {
+    font-size: 14px;
+    line-height: 1.9;
+    padding: 0 18px;
+
+    /* ここ重要 */
+    max-width: 92%;
   }
 }

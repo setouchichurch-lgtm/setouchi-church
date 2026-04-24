@@ -88,15 +88,16 @@
 /* スライド */
 .slider {
   overflow: hidden;
+  width: 100%;
 }
 
 .slides {
   display: flex;
-  transition: 0.4s;
+  width: 100%;
 }
 
 .slide {
-  min-width: 100%;
+  flex: 0 0 100%;
 }
 
 .slide img {

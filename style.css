@@ -433,7 +433,7 @@
   display: inline;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .pc-break {
     display: none;
   }
@@ -441,10 +441,12 @@
 
 @media (max-width: 600px) {
   .description {
-    max-width: 600px;   /* YouTubeと同じ幅 */
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 600px;
     width: 100%;
+    margin: 30px auto;
+
+    padding: 0 20px;
+    box-sizing: border-box; /* ←これ超重要 */
 
     text-align: center;
     font-size: 14px;

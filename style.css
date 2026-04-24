@@ -428,3 +428,18 @@
     margin-right: auto;
   }
 }
+
+.pc-break {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pc-break {
+    display: inline;
+  }
+
+  .pc-break::after {
+    content: "\A";
+    white-space: pre;
+  }
+}

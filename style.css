@@ -430,16 +430,11 @@
 }
 
 .pc-break {
-  display: none;
+  display: inline;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .pc-break {
-    display: inline;
-  }
-
-  .pc-break::after {
-    content: "\A";
-    white-space: pre;
+    display: none;
   }
 }
